@@ -1,2 +1,2 @@
-*{margin:0;padding:0}.calculator{height:320px;width:235px;border-radius:5px;overflow:hidden;display:-ms-grid;display:grid;-ms-grid-columns:(25%)[4];grid-template-columns:repeat(4, 25%);-ms-grid-rows:(48px)[5];grid-template-rows:repeat(5, 48px)}
+*{margin:0;padding:0}.calculator{height:320px;width:235px;border-radius:5px;overflow:hidden;display:-ms-grid;display:grid;-ms-grid-columns:(25%)[4];grid-template-columns:repeat(4, 25%);-ms-grid-rows:1fr 48px 48px 48px 48px 48px;grid-template-rows:1fr 48px 48px 48px 48px 48px}
 /*# sourceMappingURL=Calculator.css.map */
