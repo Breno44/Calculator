@@ -1,0 +1,15 @@
+$bg-button: #f0f0f0;
+$border-button: 1px solid #888;
+
+.button {
+    font-size: 1.4em;
+    background-color: $bg-button;
+    border: none;
+    border-right: $border-button;
+    border-bottom: $border-button;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #e9e9e9;
+}
