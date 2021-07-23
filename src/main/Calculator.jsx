@@ -1,9 +1,21 @@
 import React, { Component } from 'react'
 import './Calculator.css'
+
 import Button from '../components/Button'
 import Display from '../components/Display'
 
+// eslint-disable-next-line no-unused-vars
+const initialState = {
+    displayValue: '0',
+    clearDisplasy: false,
+    operation: null,
+    values: [0, 0],
+    current: 0
+}
+
 export default class Calculator extends Component {
+
+    state = { ...initialState }
 
     constructor(props) {
         super(props)
@@ -13,21 +25,34 @@ export default class Calculator extends Component {
     };
 
     clearMemory () {
-        console.log("limpar")
+        this.setState({...initialState})
     }
 
     setOperation (operation) {
 
     }
 
-    addDigit () {
+    addDigit (n) {
+        if (n === '.' && this.state.displayValue.includes('.')) {
+            return
+        }
 
+        const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplasy;
+        const currentValue = clearDisplay ? '' : this.state.displayValue;
+        const displayValue = currentValue + n;
+
+        this.setState({ displayValue, clearDisplay: false });
+
+        if(n !== '.') {
+            // eslint-disable-next-line react/no-direct-mutation-state
+            this.state.values[this.state.current]= parseFloat(displayValue)
+        }
     }
 
     render() {
         return (
             <div className="calculator">
-                <Display value={100} />
+                <Display value={this.state.displayValue} />
                 <Button label="AC" click={this.clearMemory} triple/>
                 <Button label="/" click={this.setOperation} operation/>
                 <Button label="7" click={this.addDigit}/>
