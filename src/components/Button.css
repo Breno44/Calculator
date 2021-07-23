@@ -1,2 +1,2 @@
-.button{font-size:1.4em;background-color:#f0f0f0;border:none;border-right:1px solid #888;border-bottom:1px solid #888;cursor:pointer}.button:active{background-color:#e9e9e9}
+.button{font-size:1.4em;background-color:#f0f0f0;border:none;border-right:1px solid #888;border-bottom:1px solid #888;cursor:pointer}.button:active{background-color:#ccc}.button.double{grid-column:span 2}.button.triple{grid-column:span 3}.button.operation{background-color:#fa8231;color:#fff}.button.operation:active{background-color:#fa8231cc}
 /*# sourceMappingURL=Button.css.map */
